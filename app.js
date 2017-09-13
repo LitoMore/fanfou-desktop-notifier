@@ -9,7 +9,7 @@ const {
   CONSUMER_SECRET,
   OAUTH_TOKEN,
   OAUTH_TOKEN_SECRET
-} = process.env
+} = require('./config')
 
 const streamer = new Streamer({
   consumerKey: CONSUMER_KEY,
