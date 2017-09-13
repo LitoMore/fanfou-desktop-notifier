@@ -1,0 +1,27 @@
+{
+  "name": "fanfou-desktop-notifier",
+  "version": "1.0.0",
+  "description": "Fanfou Desktop Notifier",
+  "main": "app.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LitoMore/fanfou-desktop-notifier.git"
+  },
+  "author": "LitoMore",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LitoMore/fanfou-desktop-notifier/issues"
+  },
+  "homepage": "https://github.com/LitoMore/fanfou-desktop-notifier#readme",
+  "dependencies": {
+    "fanfou-sdk": "^2.3.0",
+    "fanfou-streamer": "0.0.1",
+    "node-notifier": "^5.1.2"
+  },
+  "devDependencies": {
+    "standard": "^10.0.3"
+  }
+}
