@@ -2,6 +2,15 @@
 
 Fanfou Desktop Notifier
 
+## Requirements
+
+- **macOS**: >= 10.8 or Growl if earlier.
+- **Linux**: `notify-osd` or `libnotify-bin` installed (Ubuntu should have this by default)
+- **Windows**: >= 8, task bar balloon for Windows < 8. Growl as fallback. Growl takes precedence over Windows balloons.
+- **General Fallback**: Growl
+
+See [documentation and flow chart for reporter choice](./DECISION_FLOW.md)
+
 ## Usage
 
 1. Clone this repository
