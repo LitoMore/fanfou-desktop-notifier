@@ -41,6 +41,13 @@ const replyBox = (message, res) => {
   })
 }
 
+const messageBox = (message, res) => {
+  notifier.notify({
+    title: '饭否',
+    message
+  })
+}
+
 // Mentions
 streamer.on('message.mention', res => {
   replyBox(`@${res.source.screen_name} 提到了你\n${res.object.text}`, res)
@@ -64,6 +71,21 @@ streamer.on('fav.create', res => {
 // Del fav
 streamer.on('fav.delete', res => {
   replyBox(`@${res.source.screen_name} 取消收藏了\n${res.object.text}`, res)
+})
+
+// Create direct message
+streamer.on('dm.create', res => {
+  messageBox(`@${res.source.screen_name} 私信了你\n${res.object.text}`, res)
+})
+
+// Create friend
+streamer.on('friends.create', res => {
+  messageBox(`@${res.source.screen_name} 关注了你`)
+})
+
+// Request friend
+streamer.on('friends.request', res => {
+  messageBox(`@${res.source.screen_name} 请求关注你`)
 })
 
 streamer.start()
