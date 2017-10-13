@@ -5,26 +5,21 @@ const notifier = require('node-notifier')
 const Fanfou = require('fanfou-sdk')
 
 const {
-  CONSUMER_KEY,
-  CONSUMER_SECRET,
-  OAUTH_TOKEN,
-  OAUTH_TOKEN_SECRET
+  CONSUMER_KEY: consumerKey,
+  CONSUMER_SECRET: consumerSecret,
+  OAUTH_TOKEN: oauthToken,
+  OAUTH_TOKEN_SECRET: oauthTokenSecret
 } = require('./config')
 
-const streamer = new Streamer({
-  consumerKey: CONSUMER_KEY,
-  consumerSecret: CONSUMER_SECRET,
-  oauthToken: OAUTH_TOKEN,
-  oauthTokenSecret: OAUTH_TOKEN_SECRET
-})
+const options = {
+  consumerKey,
+  consumerSecret,
+  oauthToken,
+  oauthTokenSecret
+}
 
-const ff = new Fanfou({
-  auth_type: 'oauth',
-  consumer_key: CONSUMER_KEY,
-  consumer_secret: CONSUMER_SECRET,
-  oauth_token: OAUTH_TOKEN,
-  oauth_token_secret: OAUTH_TOKEN_SECRET
-})
+const streamer = new Streamer(options)
+const ff = new Fanfou(options)
 
 const replyBox = (message, res) => {
   notifier.notify({

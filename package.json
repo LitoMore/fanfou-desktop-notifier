@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/LitoMore/fanfou-desktop-notifier#readme",
   "dependencies": {
-    "fanfou-sdk": "^2.3.0",
+    "fanfou-sdk": "^2.5.0",
     "fanfou-streamer": "^0.2.0",
     "node-notifier": "^5.1.2"
   },
